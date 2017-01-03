@@ -1,0 +1,184 @@
+$white : #feffff
+$blue : #98dafc
+$yellow : #daad86
+$black : #312c32
+$darkblue: rgb(7, 151, 223)
+//Reset
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  text-decoration: none
+  font-family: 'Lobster', cursive
+  //border: 1px solid white
+
+html
+  background-image: linear-gradient(#6058d2 ,$yellow)
+  min-height: 100%
+  max-height: 120%
+
+  
+
+
+// Title
+#title
+  margin-top: 15vmin
+  text-align: center
+
+  h1
+    font-size: 8vmin
+    color: $yellow
+  
+
+
+
+/* Search Div*/
+#search
+  margin: 10% auto 5% auto
+  width: 40%
+  //border: 1px solid black
+
+  #wrap 
+    height: 8vmin
+    border-radius: 1vmin
+    position: relative
+    span
+      font-size: 4.5vmin
+      width: 12%
+      text-align: center
+      background-color: $darkblue
+      padding: 2vmin 0 
+    input
+      width: 88%
+      background-color: $blue 
+      font-size: 3.5vmin
+      text-indent: 1vmin
+      outline: none    
+    span, input
+      height: 100%
+      display: block  
+      float: left 
+      border: none
+      
+
+
+  #wrap::after
+    content: ""
+    display: block
+    clear: both
+
+  /* Surprise me button */
+  a
+    cursor: pointer
+    font-size: 4vmin
+    display: block
+    margin: 8vmin auto
+    margin-bottom: 5vmin
+    width: 70%
+    max-width: 200px
+    text-align: center
+    padding: 1vmin
+    background-color: $black
+    box-shadow: 0 -4px 4px black inset, 0 0 3px rgba(0,0,0,0.7) 
+    border-radius: 0.5vmin 
+    color: $white
+     
+    
+  a:active
+    position: relative
+    top: 2px
+    box-shadow: none
+    outline: none
+
+  a:hover
+    opacity: 0.8
+
+ 
+    
+
+#suggestions
+  width: 100%
+  position: absolute
+  top: 100%
+  max-height: 30vmin
+  overflow-y: scroll
+  z-index: 100
+
+#suggestions > p
+  font-size: 3vmin
+  text-indent: 2vmin
+  cursor: pointer
+  background-color: $black
+  color: $blue
+
+#suggestions > p:hover
+  background-color: rgb(36,34,37)
+
+#info
+  width: 70%
+  display: flex
+  margin: auto
+  background-color: $black
+  border-radius: 1vmin
+  flex-direction: row-reverse
+  align-items: center
+  justify-content: space-around
+
+  img
+    max-width: 100px
+    max-height: 100px
+    margin: 2vmin
+
+  #text
+    display: flex
+    flex-direction: column-reverse
+    align-items: center
+    
+    p
+      color: $white
+      font-size: 2.6vmin
+      text-indent: 1.5vmin
+      font-family: Sans-serif !important
+      line-height: 3.6vmin
+      margin-top: 10px
+        
+    a
+      color: $yellow
+      font-size: 3.6vmin
+      margin-bottom: 10px
+    
+    a:hover
+      color: #ff9000
+
+
+
+::-webkit-scrollbar 
+  width: 2.5vmin
+
+::-webkit-scrollbar-track 
+  background-color: $white
+  
+::-webkit-scrollbar-thumb 
+  background-image: linear-gradient($black,$blue)
+
+@media only screen and (max-width: 650px) 
+  #search 
+    margin-bottom: 18vmin
+    margin-top: 18vmin
+    width: 60%
+    a
+      margin-top: 10vmin
+  
+  #info
+    width: 90%
+
+@media only screen and (max-width: 1000px) and (min-width: 651px)
+  #search 
+    margin-bottom: 11vmin
+    margin-top: 17vmin
+    width: 45%
+    a
+      margin-top: 8vmin
+  
+  #info
+    width: 80%
